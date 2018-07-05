@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abbas Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet"> 
+    <script src="./scripts/scriptcontact.js"></script>
+</head>
+<body>
+<div class="wrapper">
+        <header>
+            <div>
+                <img src="./images/AbbasPIC.jpg" alt="Abbas Ahmadi">
+            </div>
+            <h1>Abbas Ahmadi</h1>
+    <!-- Social media icons start -->
+    <div id="socialmedia-icons-header">
+        
+    </div>           
+    
+    <!-- Social media icons finished -->
+            <button class="hamburger" id="hamburger">
+                    <span class="hamburger-content" tabindex="-1">
+                        <span class="text">Menu</span>
+                        <span class="bar"></span>
+                    </span><!-- end button-content -->
+            </button>
+        </header>
+        <nav id="navtop" class="header-nav">
+            <ul>
+                <li><a href="./index.html">About</a></li>
+                <li><a href="./project.html">Projects</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    <main>
+        <!-- <div class="banner">
+            <img src="./images/damian-zaleski-843-unsplash.jpg" alt="comp1950">
+            <h3>Contact</h3>
+        </div> -->
+
+    <div class="container-contact">
+        <div class="box box1-contact">
+            <!-- <h2>Student information</h2> -->
+            <!-- form start -->
+            <!-- <form action="" method="" id="form01"> -->
+            <form id="form01">
+                <fieldset >
+                    <legend>Have a question or message?</legend>
+                    <h2>Your basic info</h2>                                                     
+                    <div id="info">               
+                        <div id="firstname" class="form-align-top">
+                            <label for="cname" ><span class="spanLable">*</span>First name:</label>
+                            <input type="text" name="cname" id="cname" title="Enter your first name" required/>
+                        </div>
+    
+                        <div id="lastname" class="form-align-top">
+                            <label for="clname">Last name:</label>
+                            <input type="text" name="clname" id="clname" title="Enter your last name" />
+                        </div>
+                            
+                        <div id="email-div" class="form-align-top">
+                            <label for="email" ><span class="spanLable">*</span>Email:</label>
+                            <input type="email" name="email" id="email" required/>
+                        </div>
+    
+                        <div id="student-status" class="student-status">
+                            <h2>Student status</h2>
+                            <!-- <label><b>Student Status:</b></label><br>                     -->
+                            <input type="radio" id="Current-Student" name="student-status" value="1" checked>
+                            <label for="Current-Student"><span class="radio">Current Student</span></label><br>               
+                            <input type="radio" id="Prospective-Student" name="student-status" value="2">
+                            <label for="Prospective-Student"><span class="radio">Prospective Student</span></label>       
+                        </div>
+                        <div id="snumber-div" class="form-align-top">            
+                        <label for="snumber"></label>
+                            <input type="text" name="snumber" id="snumber"
+                            placeholder="Student number"
+                            pattern="[A-Za-z][0-9]{8,8}" title="One letter and 8 digit(a01010111)"/>
+                        </div>       
+
+                        <div id="stext" class="form-align-top">
+                            <h2>Student message</h2>
+                            <!--<label for="stext" ><span class="spanLable"></span>Student message:</label>-->
+                            <textarea name="comment" id="comment" ></textarea>
+                        </div><br>                                                         
+                        <div class="controls">
+                            <input id="submit" name="submit" type="submit" value="Submit" />
+                        </div>
+                    </div>
+                </fieldset>
+            </form>               
+            <!-- form end -->
+        </div>
+        <div id="welcome" class="box box2-contact">
+            <h2>Dear visitor,</h2>
+            <p id="greeting">
+                    After having worked for a couple of years, I realized my
+                    strength is accomplishing a large amount of work within a
+                    short period. I get things done on time and my manager
+                    always appreciated it. I have sound knowledge about
+                    front-end development. I have always been a great team
+                    player. I am good at keeping a team together and producing
+                    quality work in a team environment.
+            </p>
+
+        </div>                        
+    </div>
+<!-- Modal effect start -->
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <p id="p01" class="modal-content"></p>
+    </div>
+<!-- End of Modal effect-->
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2018 Abbas Ahmadi</p>
+        </div>  
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="./index.html">About</a></li>
+                <li><a href="./project.html">Projects</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>  
+        <div id="socialmedia-icons-footer">
+            <a href="#0">
+                <img width="30" alt="Twitter" src="./images/my-icons-collection/svg/004-social-media-1.svg">
+            </a>
+            <a href="#0">
+                <img width="30" alt="Instagram" src="./images/my-icons-collection/svg/002-social-media-2.svg">
+            </a>
+            <a href="https://github.com/abbas565" target="_blank">
+                <img width="30" alt="github" src="./images/my-icons-collection/svg/github-logo.svg">
+            </a>
+            <a href="#0">
+                <img width="30" alt="Linkedin" src="./images/my-icons-collection/svg/001-social-media-3.svg">
+            </a>
+            <a href="#0">
+                <img width="30" alt="Facebook" src="./images/my-icons-collection/svg/005-social-media.svg">
+            </a>           
+        </div>      
+    </footer>
+</div>
+<script src="./scripts/script.js"></script>
+</body>
+</html>

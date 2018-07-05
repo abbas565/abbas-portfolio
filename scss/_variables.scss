@@ -1,0 +1,61 @@
+// Colors
+$brand-color: rgb(144, 145, 146);
+$brand-color-logo: rgb(0, 62, 107);
+$body-bg-color: rgba(48, 48, 48, 0.829);
+$hover-bg-color: rgb(122, 147, 172);
+$wrapper-bg-color: white;
+$wrapper-bgcolor-blue: rgb(239, 243, 243);
+// Text Colors
+$text-color-dark: black;
+$text-color-medium: rgb(85, 85, 85);
+$text-color-light: white;
+
+// Use Color functions to brighten and darken colors
+$brand-color-dark: darken($brand-color, 20);
+$brand-color-light: lighten($brand-color, 50);
+$brand-color-medium: rgb(78, 91, 104);
+
+// Fonts
+$body-font: Georgia, Times, Times New Roman, serif;
+$heading-font: Tahoma, Verdana, Segoe, sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+
+// Layout variables
+$padding: 30px;
+// Grid Values
+$gutter: 2;
+
+// Function to determine column width
+// takes two numerical parameters:
+// $c -> the number of columns in a row
+// $g -> the gutter amount
+@function colWidth($c, $g: 2){
+    @return ((100 - $g * ($c - 1)) / $c) * 1%;
+}
+
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
+
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+$phoneSmall: em(370);
+
+// Utility variables
+$link-hover-selector: '&:hover, &:focus, &:active';
+
+

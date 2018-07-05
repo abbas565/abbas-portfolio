@@ -1,0 +1,70 @@
+// Hamburger Styles
+.hamburger {
+
+    display: none;
+
+    @media (max-width: $phoneLandscape){
+        display: block;
+        width: 40px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    
+        .hamburger-content {
+            height: 24px;
+        }
+
+        .text {
+            @include visually-hidden;
+        }
+
+        .bar {
+            $transition: all 0.3s ease-in-out;
+            $bar-height: 4px;
+            @mixin bar($pos-neg: '') {
+                content: "";
+                width: 100%;
+                height: $bar-height;
+                top: #{$pos-neg}10px;
+                left: 0;
+                background-color:white;
+                position: absolute;
+                transition: $transition;
+                .show & {
+                    top: 0;
+                    transform: rotate(#{$pos-neg}45deg);
+                }
+            }
+
+            display: block;
+            height: $bar-height;
+            background-color: $text-color-light;
+            width: 100%;
+            position: relative;
+            top: 10px;
+            transition: $transition;
+
+            .show & {
+                background-color: transparent;
+            }
+
+            &:after {
+               @include bar;
+            }
+            &:before {
+               @include bar('-');
+            }
+        }
+
+        &:focus,
+        .hamburger-content:focus {
+            outline: none;
+        }
+
+        &:focus .hamburger-content {
+            outline: 5px solid #7683C9;
+        }
+    
+    }
+}

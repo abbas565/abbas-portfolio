@@ -1,0 +1,114 @@
+// Main Navigation Styles
+
+.header-nav {
+    // locally scoped variable
+    $height: 40px;
+    $border: 1px solid white;    
+    background-color: $brand-color-dark;
+    height: $height;
+    border-top: $border;
+
+     ul {
+        @include flatten;
+        list-style: none;
+        display: flex;
+        // justify-content:space-around;
+        @media (max-width: $phoneLandscape){
+            display: block;
+        }
+        li {
+            flex: 1;
+        }
+    
+        a {
+            display: block;
+            color: $text-color-light;
+            border-top: $border;
+            line-height: $height;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+            outline: none;
+            
+            #{$link-hover-selector} {
+                background-color: rgba(white, 0.3);
+            }
+    
+            @at-root nav li:last-child a {
+                border-right: none;
+            }    
+        }
+        .active {
+            background-color: rgba(white, 0.3); 
+        }
+    }
+
+    @media (max-width: $phoneLandscape) {
+        display: none;
+        height: auto;
+        border-top: none;
+
+        .show & {
+            display: block;
+        }
+
+        a {
+            line-height: 50px;
+            border-right: none;
+            border-top: $border;
+        }        
+    }
+}
+
+// On Scroll Header style start
+.sticky {
+    // display: flex;
+    position: fixed;
+    top: 0;
+    width:1200px;
+    
+    z-index: 850;
+    opacity: .7;
+  }
+  
+.sticky + main {
+    margin-top: 53px;
+}
+// On Scroll Header style finished
+
+
+.footer-nav {
+    ul {
+        @include flatten;
+        list-style: none;
+        display: flex;
+        @media (max-width: $phoneLandscape){
+            padding-bottom: $padding;
+        }
+
+        li {
+            flex: 1;
+            padding-right: $padding;
+        }
+    
+        a {
+            display: block;
+            color: $text-color-light;
+            text-align: center;
+            font-size: 1.2em;
+            text-decoration: none;
+            outline: none;
+            
+            #{$link-hover-selector} {
+                border-bottom: 2px solid $text-color-light;
+                padding-bottom: 4px;
+                transition: border-bottom 0.2s; 
+            }          
+        } 
+    }
+    .active {
+        color:darken($text-color-medium, 20);
+        font-weight: bold;
+    }
+
+}   

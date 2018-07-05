@@ -1,0 +1,54 @@
+// Header styles
+header {
+    // position: absolute;
+    background-color: $brand-color;
+    padding: $padding/2;
+    @include flex-layout-row;
+    align-items: center;
+
+    div{
+        img{
+            width: 200px;
+            height: auto;
+        }
+        a{
+            text-decoration-line: none;
+            
+            p{
+                @include flatten;
+                color: $text-color-light;
+                font-size: 4em;
+                padding: $padding $padding/3;
+                background-color: $brand-color-logo;
+                @media (max-width: $phoneLandscape){                
+                font-size: 2.5em;
+                }
+            }
+        }     
+    }
+
+    h1 {
+        @include flatten;
+        letter-spacing: 1px;
+        color: $text-color-light;
+        font-size: 4em;
+        @media (max-width: $phoneLandscape){
+            display: none;
+            font-size: 1.6em;
+        }
+    }
+
+    #socialmedia-icons-header {
+        margin-top: $padding*2/3;
+        margin-right: $padding*4/3;
+
+        a{
+            text-decoration: none;
+        }
+        @media (max-width: $phoneLandscape){
+            display:none;
+        }
+    }
+    
+
+}

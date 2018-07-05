@@ -1,0 +1,1040 @@
+// Main Styles
+
+main {
+    padding: $padding; 
+    @media screen and (max-width: $phonePortrait) {
+        padding: $padding*.2;
+        } 
+    
+    img{
+        -webkit-filter: drop-shadow(3px 3px 12px black);
+	    filter: drop-shadow(3px 3px 12px black); 
+    }
+
+    section:not(:first-child) {
+        margin-top: $padding;
+    }
+
+
+    .banner {
+        position: relative;
+        z-index: 800;
+        padding-bottom: $padding/2;
+      
+
+        .banner-outline-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $text-color-dark;
+            font-size: 5vw;
+            letter-spacing: .2em; 
+        }
+        
+        h2 {
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            color: $text-color-light;
+            font-size: 4vw;
+            letter-spacing: .1em; 
+        }
+        h3 {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            color:$text-color-medium;
+            font-size: 5vw;
+            letter-spacing: .1em; 
+    }
+        .customized-heading {
+            color: $text-color-medium;
+        }
+    }
+
+    .info-box {
+        position: absolute;
+        top: $padding/2;
+        left: 80px;
+        color:$text-color-dark;
+        animation: slideInLeft 1s 0.5s 1 ease both;
+            
+        h1 {
+            margin-bottom: 0.2em;
+        }
+    
+        a {
+            color: $text-color-dark;
+        }
+    
+        @media screen and (max-width: $phoneLandscape) {
+                top: $padding/5;
+                left: 20px;  
+                font-size: 0.6em;
+        }
+        
+        .banner-title {
+            font-size: 4vw;
+            font-weight: 600;
+            color: $text-color-dark;
+            text-shadow:6px 6px 0 rgba(0,0,0,0.3);
+        }
+    
+        .banner-subtitle {          
+            font-size: 2vw;
+            font-weight: bold;
+            @media screen and (max-width: $phoneLandscape){        
+                display: none;  
+            }
+        }
+    }
+
+    
+    /* Banner Image Animation Keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Info Box Animation Keyframes */
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: visible;
+      }
+    
+      to {
+        transform: translateX(0);
+         opacity: 1;
+      }
+    }
+
+    
+
+/* Some default styles to make each box visible */
+.box {
+    
+    text-align: left;
+    // text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+    padding:$padding/3;
+    margin-bottom: $padding;
+    border: .5px solid rgba(0, 0, 0, 0.431);
+  }
+   
+   /* We start writing out grid(.container-index) here. */
+  .bold {
+      font-weight: bold;
+  }
+  .container-index {
+        display: grid;
+        margin-top: 50px;
+        /* Use the repeat function to repeat same sized columns */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 30px;
+
+        /* Note: use " . "  as a placeholder if you want
+           to leave one section of the grid blank */
+        grid-template-areas:
+            "three three three three three"
+            "two two one one one"
+            "four four four four four"
+            "five five five five five"
+            "six six seven seven seven";
+
+        @media screen and (max-width: $phoneLandscape) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "three"
+			"two"
+			"one"
+			"four"
+            "five"
+            "six"
+            "seven";
+    }
+
+
+    .box1 {
+        grid-area: one;
+        @include box-shadow;
+        @include box-mixin-style;
+        padding: 0 $padding;
+            @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            } 
+        h2 {
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);                 
+        }
+        li {
+            margin-bottom: 30px;
+        }       
+    }
+
+//     .box2 {        
+//         grid-area: two;
+//         @include box-shadow;
+//         padding: $padding*3/4;
+//             @media screen and (max-width: $phonePortrait) {
+//             padding: $padding*.2;
+//             }
+       
+//         h2 {
+//             font-size: 2em;          
+//         }
+//         img{
+//             height: 100px;
+//             width: 100px;
+//         }
+
+// // box2 logos style start
+//        .box2-skills{
+//             display: flex;
+//             flex-direction: row;
+//             flex-wrap: wrap;
+//             justify-content: space-around;
+//             align-items:center;
+//             // flex: 1 1 40px;
+//                 .box2-skills-img{
+//                     border: 1px solid black;
+//                     margin-top: 15px;  
+//                     img{
+//                         position: relative;
+//                     }
+//                     h3{
+//                         .card-title {
+//                             position: absolute;
+//                             bottom: 0;
+//                             left: 0;
+//                             width: 100%;
+//                             margin: 0;
+//                             padding: 0px;
+//                             background-color: rgba(255,255,255, 0.4);
+//                         }
+//                     }                 
+//                 }
+
+//------------box2-h3-start
+
+.box2 {        
+    grid-area: two;
+    @include box-shadow;
+    // padding: $padding*3/4;
+        @media screen and (max-width: $phonePortrait) {
+        padding: $padding*.2;
+        }
+   
+    h2 {
+        font-size: 2em;          
+    }
+    // img{
+    //     height: 100px;
+    //     width: 100px;
+    // }
+    // object-fit: cover; 
+// box2 logos style start
+   .box2-skills{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    //   object-fit: cover; 
+        // align-items:center;
+        // align-content: center;
+        // flex: 1 1 40px;
+            .box2-skills-img{
+                border: 1px solid black;
+                margin-top: 15px; 
+                //  object-fit:cover; 
+                height: 100px;
+                    width: 100px;
+                    object-fit: cover;
+
+                .card {
+                    position: relative;
+                    height: 100px;
+                    width: 100px;
+                    //  object-fit:cover; 
+                .featured-image {
+                    height: 100px;
+                    width: 100px;
+                    // object-fit: fill;
+                    img{
+                            position: relative;
+                            height: 100px;
+                            width: 100px;
+                            transition: all 0.5s ease;
+                            // object-fit: cover;
+                            &:hover{
+                                transform: scale(1.4);                               
+                            }
+                        }                        
+                }
+
+                    .card-title {
+                        // float: right;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0px;
+                        background-color: rgba(255,255,255, 0.5);
+                        color: red;
+                        text-align: center;                       
+                    }
+            }
+
+                // h3{
+                //         .card-title {
+                //             // float: right;
+                //             position: absolute;
+                //             bottom: 0;
+                //             left: 0;
+                //             width: 100%;
+                //             margin: 0;
+                //             padding: 0px;
+                //             background-color: rgba(255,255,255, 0.4);
+                //             color: red;
+                //         }
+                //     }                 
+            }
+
+//------------box2-h3-finish
+
+// box2 logos style end
+
+        // margin-top: 50px;
+        /* Use the repeat function to repeat same sized columns */
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        // grid-auto-rows: auto;
+        // grid-row-gap: 20px;
+        // grid-column-gap: 20px;
+
+        // /* Note: use " . "  as a placeholder if you want
+        //    to leave one section of the grid blank */
+        // grid-template-areas:
+        //     "twoone twotwo twothree twofour"
+        //     "twofive twosix twoseven twoeight"
+        //     "twonine twoten twoeleven twotwelve"
+        //     "twothirteen twofourteen . .";
+
+        //     .box2-skills-img{
+        //         border: 1px solid black;
+        //         @include box-shadow;
+        //         padding: $padding*3/40;
+        //     }
+
+        //     .box2-01{
+        //         grid-area: twoone;              
+        //     }
+        //     .box2-02{
+        //         grid-area: twotwo;              
+        //     }
+        //     .box2-03{
+        //         grid-area: twothree;              
+        //     }
+        //     .box2-04{
+        //         grid-area: twofour;              
+        //     }
+        //     .box2-05{
+        //         grid-area: twofive;              
+        //     }
+        //     .box2-06{
+        //         grid-area: twosix;              
+        //     }
+        //     .box2-07{
+        //         grid-area: twoseven;              
+        //     }
+        //     .box2-08{
+        //         grid-area: twoeight;              
+        //     }
+        //     .box2-09{
+        //         grid-area: twonine;              
+        //     }
+        //     .box2-10{
+        //         grid-area: twoten;              
+        //     }
+        //     .box2-11{
+        //         grid-area: twoeleven;              
+        //     }
+        //     .box2-12{
+        //         grid-area: twotwelve;              
+        //     }
+        //     .box2-13{
+        //         grid-area: twothirteen;              
+        //     }
+        //     .box2-14{
+        //         grid-area: twofourteen;              
+        //     }
+       }
+
+    }
+
+    .box3 {
+        grid-area: three;
+        @include box-shadow;
+        padding-top: $padding;
+            @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            } 
+        h2 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);
+            @media screen and (max-width: $phonePortrait) {
+                font-size:2em;
+            }   
+           }
+        p {
+            text-align: center;
+            font-size: 2em;
+            color: $text-color-medium;
+            text-shadow: 2px 2px 4px  rgb(184, 173, 173); 
+        }
+       
+    }
+
+    .box4 {
+        grid-area: four;
+        background-color: $brand-color-medium;
+        color: white;
+        @include box-shadow;
+        padding: $padding;
+            @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            }
+        p {
+            font-size: 1.5em;
+            
+        }
+       h2 {
+        font-size: 2em;
+        text-align: center;
+       }
+
+    }
+
+    .box5 {
+        grid-area: five;
+        box-shadow: -1px 2px 1px 2px $brand-color-dark;
+        margin-bottom: 40px;
+        padding: $padding $padding;
+            @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            }
+
+        h2 {
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);
+            text-align: center;
+            // padding: .9em;
+        }
+        li {
+            padding: .1em;
+        }
+        
+    }
+    
+    .box6 {
+        grid-area: six;
+        background-color: $brand-color-medium;
+        color: white;
+        @include box-shadow;
+        padding: $padding;
+            @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            }
+        p {
+            font-size: 1.5em;
+            
+        }
+       h2 {
+        font-size: 2em;
+        text-align: center;
+       }
+
+    }
+
+    .box7 {
+            grid-area: seven;
+            @include box-shadow;
+            padding: $padding*3/4;
+                @media screen and (max-width: $phonePortrait) {
+                padding: $padding*.2;
+                }
+        
+            h2 {
+                font-size: 2em;
+            }
+        }
+
+}
+
+
+
+     /* We start writing out grid(.container-outline) here. */
+     .container-outline {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        display: grid;
+        /* Use the repeat function to repeat same sized columns */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 60px;
+        grid-column-gap: 80px;
+        /* Note: use " . "  as a placeholder if you want
+           to leave one section of the grid blank */
+        grid-template-areas:
+            "five five five"
+            "three two two"
+            "one one one"
+            "four four four";
+            
+
+        @media screen and (max-width: $phoneLandscape) {
+        .box4 {
+            p {
+                text-align: left;
+            }
+        }
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "five"
+			"three"
+			"two"
+			"one"
+            "four";
+    }
+
+    
+    .box1-outline {
+        grid-area: one;
+        text-align: justify;
+        @include box-mixin-style;
+        @include box-shadow;
+        padding: 20px 70px 60px 70px;
+        @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            } 
+        letter-spacing: .2px;
+        background-color: $brand-color-medium;
+        color: white;
+        h2 {
+                font-size: 2em;
+                text-shadow: 2px 2px 4px rgb(184, 173, 173);
+                text-align: center;
+                padding: .9em;
+        }
+        p{
+            line-height: 200%;
+        }
+    }
+
+    .box2-outline {
+        grid-area: two;
+        border-radius: 5px;
+        @include box-shadow;
+        padding-left: $padding*5/3; 
+        @media screen and (max-width: $phonePortrait) {
+            padding: $padding*.2;
+            } 
+        align-self: center;
+        li {
+            padding: $padding/3;
+        }
+    }
+
+    .box3-outline {
+        grid-area: three;
+        border-radius: 5px;
+        @include box-shadow;
+        li {
+            padding: 5px;
+        }
+        h2 {
+            padding-left: $padding/2;
+        }
+        
+    }
+
+    .box4-outline {
+        max-width: 100%;
+        grid-area: four;
+        @include box-shadow;
+        justify-self: center;     
+        h2 {
+            text-align: center;
+        }
+    } 
+    
+    .box5-outline {
+        grid-area: five;
+        border: .5px solid gray;
+        h2 {
+            font-size: 4em;
+            text-align: center;
+            letter-spacing: .2em;
+            font-weight: bold;
+            @media screen and (max-width: $phoneLandscape){
+                font-size: 3em;
+                letter-spacing: .1em;
+
+            }
+           }
+    }
+  }
+
+
+   /* We start writing out grid(.container-schedule) here. */
+   .container-schedule {
+    display: grid;
+    margin-top: 0px;
+    /* Use the repeat function to repeat same sized columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 40px;
+    /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+    grid-template-areas:
+       "fourteen fourteen fourteen fourteen"
+        "one two three four"
+        "twelve thirteen thirteen five"
+        "eleven thirteen thirteen six"
+        "ten nine eight seven";
+  
+
+    @media screen and (max-width: $phoneLandscape) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "fourteen"
+        "thirteen"
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight"
+        "nine"
+        "ten"
+        "eleven"
+        "twelve";
+}
+    
+
+    .box1-schedule {
+        grid-area: one; 
+        @include box-schedule;
+          
+    }
+
+    .box2-schedule {
+        grid-area: two;
+        @include box-schedule;
+    }
+
+    .box3-schedule {
+        grid-area: three;
+        @include box-schedule;
+    }
+
+    .box4-schedule {
+        grid-area: four;
+        @include box-schedule;
+    }
+
+    .box5-schedule {
+        grid-area: five;
+        @include box-schedule;
+
+        display: grid;
+        margin-top: 0px;
+        /* Use the repeat function to repeat same sized columns */
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+        /* Note: use " . "  as a placeholder if you want
+           to leave one section of the grid blank */
+        grid-template-areas:
+           "one5 two5"
+            "three5 four5";
+         
+        // @media screen and (max-width: $phoneLandscape) {
+        // grid-template-columns: 1fr;
+        // grid-template-areas:
+        //     "one5"
+        //     "two5"
+        //     "three5"
+        //     "four5";
+
+    }   
+
+    .box6-schedule {
+        grid-area: six;
+        @include box-schedule;
+    }
+
+    .box7-schedule {
+        grid-area: seven;
+        @include box-schedule;
+    }
+
+    .box8-schedule {
+        grid-area: eight;
+        @include box-schedule;
+    }
+
+    .box9-schedule {
+        grid-area: nine;
+        @include box-schedule;
+    }
+
+    .box10-schedule {
+        grid-area: ten;
+        @include box-schedule;
+        
+    } 
+    .box11-schedule {
+        grid-area: eleven;
+        @include box-schedule;       
+    }  
+    .box12-schedule {
+        grid-area: twelve;
+        @include box-schedule;
+    }
+        .box5-1-project {
+            grid-area: one5;
+            @include box-project;
+        }
+        .box5-2-project {
+            grid-area: two5;
+            @include box-project;
+        }
+        .box5-3-project {
+            grid-area: three5;
+            @include box-project;
+        }
+        .box5-4-project {
+            grid-area: four5;
+            @include box-project;
+        }
+
+    .box13-schedule {
+        grid-area: thirteen;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        font-size: 2vw; 
+        @include box-mixin-style;
+    } 
+
+    .box14-schedule {
+            grid-area: fourteen;
+            border: .5px solid gray;
+            h2 {
+                font-size: 4em;
+                text-align: center;
+                letter-spacing: .2em;
+                font-weight: bold;
+                
+               }
+
+    }
+}
+
+/* We start writing out grid(.container-lesson) here. */
+.container-Lessons {
+    display: grid;
+    margin: 0 auto;
+    justify-items: center;
+    grid-row-gap: 20px;
+    max-width: 700px;
+    padding-bottom: 50px;
+    /* Use the repeat function to repeat same sized columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+    grid-template-areas:
+        "thirteen thirteen thirteen thirteen"
+        "one two three four"
+        "five six seven eight"
+        "nine ten eleven twelve";
+        
+    @media screen and (max-width: $phoneLandscape) {
+    .box13-Lesson {
+        h2 {
+            font-size: 6vw;
+            border: 1px solid grey;
+            padding: $padding*3/2;
+        }
+    
+    }
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "thirteen thirteen"
+        "one two"
+        "three four"
+        "five six"
+        "seven eight"
+        "nine ten"
+        "eleven twelve";
+}
+
+
+.box1-Lesson  {
+    grid-area: one;
+    @include box-lessons;  
+       
+}
+
+.box2-Lesson  {
+    grid-area: two;
+    @include box-lessons;   
+}
+
+.box3-Lesson  {
+    grid-area: three;
+    @include box-lessons;   
+}
+
+.box4-Lesson  {
+    grid-area: four;
+    @include box-lessons;   
+}
+
+.box5-Lesson  {
+    grid-area: five;
+    @include box-lessons;   
+}   
+
+.box6-Lesson  {
+    grid-area: six;
+    @include box-lessons;   
+}
+
+.box7-Lesson  {
+    grid-area: seven;
+    @include box-lessons;   
+    
+}
+
+.box8-Lesson  {
+    grid-area: eight;
+    @include box-lessons;
+}
+
+.box9-Lesson  {
+    grid-area: nine;
+    @include box-lessons;   
+    
+}
+
+.box10-Lesson  {
+    grid-area: ten;
+    @include box-lessons;   
+} 
+.box11-Lesson  {
+    grid-area: eleven;
+    @include box-lessons;   
+    
+}  
+.box12-Lesson  {
+    grid-area: twelve;
+    @include box-lessons;   
+}  
+.box13-Lesson  {
+   grid-area: thirteen;
+   font-size: calc(2vw + 8px); 
+   border:0;
+ }    
+}
+
+
+/* We start writing out grid(.container-contact) here. */
+.container-contact {
+    display: grid;
+    /* Use the repeat function to repeat same sized columns */
+    grid-template-columns:1fr;
+    grid-auto-rows: auto;
+    grid-gap: 40px;
+    /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+    grid-template-areas:
+        "one"
+        "two";
+      
+
+    @media screen and (max-width: $phoneLandscape) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "one"
+        "two";
+    }
+
+    .box1-contact {
+        grid-area: one;
+        @include box-mixin-style;
+    }
+
+    .box2-contact {
+        grid-area: two;
+        color: $text-color-light;
+        background-color: $brand-color-medium;
+        border-radius: 5px;
+        font-size: 20px;       
+    }
+
+    #submit {
+      display: block;
+      margin: 0 auto;
+    }
+    #form01 {
+        display: grid;
+        justify-content: center;
+    }
+   
+// form style start
+
+    fieldset {
+        display: grid;
+        margin-top:20px;
+        display: block;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 0.35em;
+        padding-bottom: 0.625em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border: dashed 1px black;
+      }
+
+    .span{
+        color: white;
+        border-radius: 50%;
+        padding: 0px 10px 0px 10px;
+        font-size: 1.2rem;        
+    }
+    form, input, optgroup, select, legend{
+        font-size: 1.3rem;
+      }
+      .form-align-top label{
+      /*  font-size: 1.3rem;*/
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+       
+      input[type="checkbox"]{
+        margin-top: 10px;
+      }
+      
+      input[type="text"]{
+        width: 500px;
+        @media screen and (max-width: $phoneLandscape) {
+            width: 200px;
+            }
+      }
+      input[type="email"], select{
+        width: 500px;
+        @media screen and (max-width: $phoneLandscape) {
+            width: 200px;
+            }
+      }
+      .spanLable{
+        color: red;
+          }
+
+    textarea {
+        width: 500px;
+        height: 200px;
+        @media screen and (max-width: $phoneLandscape) {
+            width: 200px;
+            }
+    }
+    
+    .radio {
+        font-size: 1em;
+    }
+    .controls {
+        margin: $padding;
+    } 
+}
+
+}
+
+//lessons 
+.lesson-content{
+    h1 {
+        margin-top: 0;
+    }
+   
+    text-align: center;
+
+    //Individual Lessons
+    .lesson-section {
+        padding-bottom: 1em;
+        text-align: left;
+
+        .tabbed {
+            padding-left: 40px;
+        }
+
+        video {
+            height: 100%;
+            max-width: 100%;
+          }
+
+        .centered {
+            display: block;
+            max-width: 100%;
+            @include margin-center;
+        }
+    }
+
+    @media screen and(max-width: $tabletPortrait) {
+        padding: $padding;
+    }
+
+    @media screen and(max-width: $phoneLandscape) {
+        ul {
+            padding-left: 1em;
+        }
+    }
+
+}
+
+.container-schedule,
+.container-Lessons,
+ header {
+a {
+    color:$text-color-light;
+    font-weight: bold;
+    &:link,
+    &:focus { 
+        text-decoration: none;        
+     }
+     &:hover,
+     &:active {
+         color:$text-color-dark;
+     }
+    }
+}
+
+
+
+
