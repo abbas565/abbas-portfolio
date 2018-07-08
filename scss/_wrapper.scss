@@ -4,6 +4,10 @@
     // max-width: 100%;
     @include margin-center;
     background-color: $wrapper-bg-color;
+    // background-color: black;
+    #abbas{
+        border-radius: 0px;
+    }
 }
 
 .wrapper-lessons {

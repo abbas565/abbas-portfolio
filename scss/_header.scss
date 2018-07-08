@@ -2,6 +2,7 @@
 header {
     // position: absolute;
     background-color: $brand-color;
+    // background-color: black;
     padding: $padding/2;
     @include flex-layout-row;
     align-items: center;
@@ -36,7 +37,20 @@ header {
             display: none;
             font-size: 1.6em;
         }
+        
     }
+    h2 {
+        @include flatten;
+        letter-spacing: 1px;
+        color: $text-color-light;
+        font-size: 2em;
+        @media (max-width: $phoneLandscape){
+            display: none;
+            font-size: 1.6em;
+        }
+        
+    }
+
 
     #socialmedia-icons-header {
         margin-top: $padding*2/3;
@@ -49,6 +63,4 @@ header {
             display:none;
         }
     }
-    
-
 }

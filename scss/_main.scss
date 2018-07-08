@@ -149,7 +149,7 @@ main {
             "two two one one one"
             "four four four four four"
             "five five five five five"
-            "six six seven seven seven";
+            "six six six seven seven";
 
         @media screen and (max-width: $phoneLandscape) {
         grid-template-columns: 1fr;
@@ -177,7 +177,7 @@ main {
             text-shadow: 2px 2px 4px rgb(184, 173, 173);                 
         }
         li {
-            margin-bottom: 30px;
+            margin-bottom: $padding/2;
         }       
     }
 
@@ -255,7 +255,6 @@ main {
             .box2-skills-img{
                 border: 1px solid black;
                 margin-top: 15px; 
-                //  object-fit:cover; 
                 height: 100px;
                     width: 100px;
                     object-fit: cover;
@@ -264,19 +263,19 @@ main {
                     position: relative;
                     height: 100px;
                     width: 100px;
-                    //  object-fit:cover; 
                 .featured-image {
                     height: 100px;
                     width: 100px;
-                    // object-fit: fill;
                     img{
                             position: relative;
                             height: 100px;
                             width: 100px;
                             transition: all 0.5s ease;
+                            // overflow: hidden;
                             // object-fit: cover;
                             &:hover{
-                                transform: scale(1.4);                               
+                                transform: scale(1.4);  
+                                // object-fit:cover;                             
                             }
                         }                        
                 }
@@ -426,6 +425,8 @@ main {
     }
 
     .box5 {
+        background-image: url("../images/georgie-cobbs-459520-unsplash-1.jpg");
+        // background-image: 
         grid-area: five;
         box-shadow: -1px 2px 1px 2px $brand-color-dark;
         margin-bottom: 40px;
@@ -604,7 +605,7 @@ main {
     /* Use the repeat function to repeat same sized columns */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    grid-gap: 40px;
+    grid-gap: 10px 40px;
     /* Note: use " . "  as a placeholder if you want
        to leave one section of the grid blank */
     grid-template-areas:
@@ -685,6 +686,26 @@ main {
     .box6-schedule {
         grid-area: six;
         @include box-schedule;
+
+        display: grid;
+        margin-top: 0px;
+        /* Use the repeat function to repeat same sized columns */
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+        /* Note: use " . "  as a placeholder if you want
+           to leave one section of the grid blank */
+        grid-template-areas:
+           "one6 two6"
+            "three6 four6";
+         
+        // @media screen and (max-width: $phoneLandscape) {
+        // grid-template-columns: 1fr;
+        // grid-template-areas:
+        //     "one6"
+        //     "two6"
+        //     "three6"
+        //     "four6";
     }
 
     .box7-schedule {
@@ -729,6 +750,23 @@ main {
         }
         .box5-4-project {
             grid-area: four5;
+            @include box-project;
+        }
+
+        .box6-1-project {
+            grid-area: one6;
+            @include box-project;
+        }
+        .box6-2-project {
+            grid-area: two6;
+            @include box-project;
+        }
+        .box6-3-project {
+            grid-area: three6;
+            @include box-project;
+        }
+        .box6-4-project {
+            grid-area: four6;
             @include box-project;
         }
 
@@ -896,7 +934,19 @@ main {
         color: $text-color-light;
         background-color: $brand-color-medium;
         border-radius: 5px;
-        font-size: 20px;       
+        font-size: 20px;    
+        p{
+            text-align: center;
+            text-shadow:6px 6px 0 rgba(0,0,0,0.3);
+            font-size: 2em;
+            color: $text-color-light;
+            font-weight: 900;
+            @media screen and (max-width: $phoneLandscape) {
+                font-size: 1em;
+                font-weight: 400;
+                text-shadow:0px 0px 0 rgba(0,0,0,0.3);
+                }
+        }   
     }
 
     #submit {
