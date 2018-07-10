@@ -23,6 +23,7 @@ function mouseEnter() {
 
 // changing images in header of index start
 function mouseEnterHeader() {
+  var ti = 150;
   setTimeout(function() {
     document.getElementById("headerimg").src = "../images/portfolio-index-filter-15.jpg";
       setTimeout(function() {
@@ -31,17 +32,17 @@ function mouseEnterHeader() {
             document.getElementById("headerimg").src = "../images/portfolio-index-filter-5.jpg";
               setTimeout(function() {
                 document.getElementById("headerimg").src = "../images/portfolio-index-filter-0.jpg";
-                }, 150);
-            }, 150);
-        }, 150);
-    }, 150);  
+                }, ti);
+            }, ti);
+        }, ti);
+    }, ti);  
   // let myid= this;
   // console.log(myid.id);
   // document.getElementById("scheduleimg").src = "./images/schedule/Day"+ `${myid.id}` +".jpg";
 }
 function mouseoutHeader() {
   // document.getElementById("headerimg").src = "../images/../images/portfolio-index-filter-20.jpg";
-
+  var to = 150;
   setTimeout(function() {
     document.getElementById("headerimg").src = "../images/portfolio-index-filter-0.jpg";
       setTimeout(function() {
@@ -50,10 +51,10 @@ function mouseoutHeader() {
             document.getElementById("headerimg").src = "../images/portfolio-index-filter-15.jpg";
               setTimeout(function() {
                 document.getElementById("headerimg").src = "../images/portfolio-index-filter-20.jpg";
-                }, 150);
-            }, 150);
-        }, 150);
-    }, 150);  
+                }, to);
+            }, to);
+        }, to);
+    }, to);  
 }
 // changing images in header of index finish
 

@@ -41,20 +41,17 @@
     </nav>
     <main>
         <div class="banner">
-            <!-- <img src="./images/emile-perron-190221-unsplash (1).jpg" alt="Photo by Émile Perron on Unsplash"> -->
-            <img id="headerimg" onmouseenter="mouseEnterHeader.call(this)"
-            onmouseout="mouseoutHeader.call(this)"
-            src="./images/portfolio-index-filter-20.jpg" alt="Abbas">
-            <div class="info-box">
-                <h1>
-                    <span class="banner-title">Web Developer</span>                     
-                    <!-- <br>
-                    <span class="banner-subtitle">Web Developmenter</span>
-                    <br>
-                    <span class="banner-subtitle">&amp; Design 2</span>
-                    <br>
-                    <span class="banner-subtitle">By Micheal Whyte</span> -->
-                </h1>                       
+            <div id="containerAnimatedImg">
+                <div id="inner">
+                    <img id="headerimg" onmouseenter="mouseEnterHeader.call(this)"
+                    onmouseout="mouseoutHeader.call(this)"
+                    src="./images/portfolio-index-filter-20.jpg" alt="Abbas">
+                    <div class="info-box">
+                        <h1>
+                            <span class="banner-title">Web Developer</span>                     
+                        </h1>                       
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -210,19 +207,6 @@
                         </a>
                     </div>   
                 </div>
-                
-                <!-- <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>JQuery</li>
-                    <li>Graphic</li>
-                    <li>Sass</li>
-                    <li>Git & Github</li>
-                    <li>SQL</li>
-                    <li>SEO</li>
-                </ul>
-                <p> <span class="bold">Special Skills :</span>React, React-Redux, React-Router</p> -->
             </div>
             <div class="box box3">
                 <p>Who Am I?</p>
@@ -361,5 +345,6 @@
     </footer>
 </div>
 <script src="./scripts/script.js"></script>
+<script src="./scripts/scriptImageAnimate.js"></script>
 </body>
 </html>

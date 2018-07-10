@@ -10,6 +10,18 @@ main {
         -webkit-filter: drop-shadow(3px 3px 12px black);
 	    filter: drop-shadow(3px 3px 12px black); 
     }
+//animate img start
+    #containerAnimatedImg {
+        perspective: 60px;
+      }
+      
+      #inner {
+        // width: 20em;
+        // height: 18em;
+        // background-color: white;
+        transition: transform 0.5s;
+      }
+//animate img finished
 
     section:not(:first-child) {
         margin-top: $padding;
@@ -166,6 +178,7 @@ main {
 
     .box1 {
         grid-area: one;
+        color: white;
         @include box-shadow;
         @include box-mixin-style;
         padding: 0 $padding;
@@ -174,10 +187,10 @@ main {
             } 
         h2 {
             font-size: 2em;
-            text-shadow: 2px 2px 4px rgb(184, 173, 173);                 
+            text-shadow: 2px 2px 4px rgb(184, 173, 173);               
         }
         li {
-            margin-bottom: $padding/2;
+            margin-bottom: $padding/2;         
         }       
     }
 
@@ -228,6 +241,8 @@ main {
 
 .box2 {        
     grid-area: two;
+    color: white;
+
     @include box-shadow;
     // padding: $padding*3/4;
         @media screen and (max-width: $phonePortrait) {
@@ -253,6 +268,7 @@ main {
         // align-content: center;
         // flex: 1 1 40px;
             .box2-skills-img{
+                background-color: white;
                 border: 1px solid black;
                 margin-top: 15px; 
                 height: 100px;
@@ -390,6 +406,7 @@ main {
         h2 {
             font-size: 3em;
             text-align: center;
+            color: white;
             text-shadow: 2px 2px 4px rgb(184, 173, 173);
             @media screen and (max-width: $phonePortrait) {
                 font-size:2em;
@@ -400,6 +417,11 @@ main {
             font-size: 2em;
             color: $text-color-medium;
             text-shadow: 2px 2px 4px  rgb(184, 173, 173); 
+        }
+        ul{
+            li{
+                color:white;
+            }
         }
        
     }
@@ -469,6 +491,7 @@ main {
 
     .box7 {
             grid-area: seven;
+            color: white;
             @include box-shadow;
             padding: $padding*3/4;
                 @media screen and (max-width: $phonePortrait) {

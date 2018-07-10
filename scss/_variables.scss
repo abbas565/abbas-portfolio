@@ -1,35 +1,35 @@
 // Colors
-    $brand-color: rgb(144, 145, 146);
-    $brand-color-logo: rgb(0, 62, 107);
-    $body-bg-color: rgba(48, 48, 48, 0.829);
-    $hover-bg-color: rgb(122, 147, 172);
-    $wrapper-bg-color: white;
-    $wrapper-bgcolor-blue: rgb(239, 243, 243);
+    // $brand-color: rgb(144, 145, 146);
+    // $brand-color-logo: rgb(0, 62, 107);
+    // $body-bg-color: rgba(48, 48, 48, 0.829);
+    // $hover-bg-color: rgb(122, 147, 172);
+    // $wrapper-bg-color: white;
+    // $wrapper-bgcolor-blue: rgb(239, 243, 243);
 
-// $brand-color:black;
-// $brand-color-logo:black;
-// $body-bg-color:black;
-// $hover-bg-color:black;
-// $wrapper-bg-color:black;
-// $wrapper-bgcolor-blue:black;
+$brand-color:black;
+$brand-color-logo:black;
+$body-bg-color:black;
+$hover-bg-color:black;
+$wrapper-bg-color:black;
+$wrapper-bgcolor-blue:black;
 
 // Text Colors
-$text-color-dark: black;
-$text-color-medium: rgb(85, 85, 85);
-$text-color-light: white;
-
-// $text-color-dark:white;
-// $text-color-medium:white;
+// $text-color-dark: black;
+// $text-color-medium: rgb(85, 85, 85);
 // $text-color-light: white;
 
-// Use Color functions to brighten and darken colors
-    $brand-color-dark: darken($brand-color, 20);
-    $brand-color-light: lighten($brand-color, 50);
-    $brand-color-medium: rgb(78, 91, 104);
+$text-color-dark:white;
+$text-color-medium:white;
+$text-color-light: white;
 
-// $brand-color-dark: black;
-// $brand-color-light: black;
-// $brand-color-medium:black;
+// Use Color functions to brighten and darken colors
+    // $brand-color-dark: darken($brand-color, 20);
+    // $brand-color-light: lighten($brand-color, 50);
+    // $brand-color-medium: rgb(78, 91, 104);
+
+$brand-color-dark: black;
+$brand-color-light: black;
+$brand-color-medium:black;
 
 // Fonts
 $body-font: Georgia, Times, Times New Roman, serif;
